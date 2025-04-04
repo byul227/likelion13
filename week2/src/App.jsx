@@ -20,7 +20,7 @@ export default function App() { //React 컴포넌트를 내보내는 코드
       <main className="main">
         <section id="about" className="section">
           <h2>안녕하세요!</h2>
-          <p>만나서 반갑습니다. 저는 전자컴퓨터공학과에 재학중인 23학번 김별입니다.</p>
+          <p>만나서 반갑습니다. 저는 컴퓨터공학과에 재학중인 22학번 홍길동입니다.</p>
           <p>함께 즐거운 동아리 생활 보내봐요 ^^</p>
           <img
             className="img"
