@@ -19,7 +19,7 @@ const MyAccount = () => {
       <h2>{name}님, 환영합니다!</h2>
       <img src={profileUrl} alt="프로필" width="100" />
       <br />
-      <Link to="/edit-profile">이름 변경하러 가기</Link>
+      <Link to="/account/edit-profile">이름 변경하러 가기</Link>
     </div>
   );
 };

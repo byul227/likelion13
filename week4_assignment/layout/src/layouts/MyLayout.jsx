@@ -1,12 +1,15 @@
-// src/layouts/MyLayout.jsx
+// MyLayout.jsx
 import React from 'react';
 import Navbar from '../components/Navbar';
+import { Outlet } from 'react-router-dom'; // ✅ 꼭 있어야 함
 
-const MyLayout = ({ children }) => {
+const MyLayout = () => {
   return (
     <>
       <Navbar />
-      <main style={{ padding: '2rem' }}>{children}</main>
+      <main style={{ padding: '2rem' }}>
+        <Outlet /> 
+      </main>
     </>
   );
 };
