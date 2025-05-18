@@ -9,7 +9,7 @@ const EditProfile = () => {
   const handleSave = () => {
     if (newName.trim()) {
       localStorage.setItem('username', newName);
-      navigate('/account/edit-profile');
+      navigate('/account');
     }
   };
 

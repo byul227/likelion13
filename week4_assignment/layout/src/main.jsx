@@ -16,13 +16,12 @@ ReactDOM.createRoot(root).render(
       <Route path="/" element={<RootLayout />}>
         <Route index element={<App />} />
         <Route path="search" element={<Search />} />
-
+      </Route>
         
         <Route path="account" element={<MyLayout />}>
           <Route index element={<MyAccount />} />
           <Route path="edit-profile" element={<EditProfile />} />
         </Route>
-      </Route>
     </Routes>
   </BrowserRouter>
 );
