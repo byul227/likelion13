@@ -1,7 +1,6 @@
 // src/pages/ProjectPage.jsx
 import styled from "styled-components";
-import Header from "../header/Header";
-import ProjectCard from "../ProjectPage/ProjectCard";
+import ProjectCard from "../components/project/ProjectCard";
 import point from "../assets/images/point2.png";
 import project1 from "../assets/images/Project1.png";
 import project2 from "../assets/images/Project2.png";
@@ -15,7 +14,6 @@ import project8 from "../assets/images/Project8.png";
 export default function ProjectPage() {
   return (
     <>
-      <Header />
       <Container>
         <TitleWrapper>
         <PointImg src={point} alt="포인트" />

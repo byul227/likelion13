@@ -1,10 +1,10 @@
 // src/DiaryPage/DiaryItems.jsx
 import styled from "styled-components";
-import img1 from "../assets/images/diary1.png";
-import img2 from "../assets/images/diary2.png";
-import img3 from "../assets/images/diary3.png";
+import img1 from "../../assets/images/diary1.png";
+import img2 from "../../assets/images/diary2.png";
+import img3 from "../../assets/images/diary3.png";
 
-export default function DiaryPage() {
+export default function DiaryItems() {
   return (
       <Wrapper>
             <StickyNote width="782px" height="806px" fontSize="130px">다들<br/>사랑해요호<br/>!!!!!!!</StickyNote>

@@ -10,10 +10,10 @@
   PointImg,
 } from "./FeedbackCard.styles";
 
-import point from "../assets/images/point1.png";
-import emoji1 from "../assets/images/emoji1.png";
-import emoji2 from "../assets/images/emoji2.png";
-import emoji3 from "../assets/images/emoji3.png";
+import point from "../../assets/images/point1.png";
+import emoji1 from "../../assets/images/emoji1.png";
+import emoji2 from "../../assets/images/emoji2.png";
+import emoji3 from "../../assets/images/emoji3.png";
 
 export default function FeedbackCard() {
   return (

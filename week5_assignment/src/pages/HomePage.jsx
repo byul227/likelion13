@@ -1,6 +1,5 @@
-import Header from "../header/Header";
-import FeedbackButton from "../homepage/FeedbackButton";
-import FeedbackCard from "../homepage/FeedbackCard";
+import FeedbackButton from "../components/home/FeedbackButton";
+import FeedbackCard from "../components/home/FeedbackCard";
 import styled from "styled-components";
 import ideathonImg from "../assets/images/ideathon.png";
 import bgImg from "../assets/images/Union.svg";
@@ -8,7 +7,6 @@ import bgImg from "../assets/images/Union.svg";
 export default function HomePage() {
   return (
     <>
-      <Header />
       <MainContainer>
         <Section>
           <TopText>작년부터 진행됐던 아이디어톤, 모두 어땠나요?</TopText>

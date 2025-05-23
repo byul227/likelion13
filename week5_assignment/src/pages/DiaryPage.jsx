@@ -1,13 +1,11 @@
 // src/pages/ProjectPage.jsx
 import styled from "styled-components";
-import Header from "../header/Header";
-import DiaryItems from "../DiaryPage/DiaryItems";
+import DiaryItems from "../components/diary/DiaryItems";
 import point from "../assets/images/point3.png";
 
 export default function DiaryPage() {
   return (
     <>
-      <Header />
       <Container>
         <TitleWrapper>
         <PointImg src={point} alt="포인트" />
