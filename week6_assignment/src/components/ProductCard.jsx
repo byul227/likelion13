@@ -4,27 +4,61 @@ import styled from "styled-components";
 export default function ProductCard({ brand, name, price, trades, image }) {
   return (
     <Card>
-      <img src={image} alt={name} />
-      <div>{brand}</div>
-      <div>{name}</div>
-      <div>{price.toLocaleString()}원</div>
-      <div>거래 {trades.toLocaleString()}회</div>
+      <ImageWrapper>
+        <TopText>거래 {trades.toLocaleString()}회</TopText>
+        <ProductImage src={image} alt={name} />
+      </ImageWrapper>
+      <Brand>{brand}</Brand>
+      <Name>{name}</Name>
+      <Price>{price.toLocaleString()}원</Price>
     </Card>
   );
 }
 
 const Card = styled.div`
-  border: 1px solid #e1e1e1;
-  border-radius: 8px;
-  width: 240px;
-  margin: 12px;
-  padding: 12px;
-  text-align: center;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  padding: 8px;
+  font-size: 14px;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  gap: 8px;
+`;
 
-  img {
-    width: 100%;
-    height: auto;
-    border-radius: 6px;
-  }
+const ImageWrapper = styled.div`
+  position: relative;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 24px;
+  background-color: #fafafa;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
+
+const TopText = styled.div`
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  font-size: 12px;
+  color: #888;
+`;
+
+const ProductImage = styled.img`
+  width: 100%;
+  height: auto;
+  max-height: 160px;
+  object-fit: contain;
+`;
+
+const Brand = styled.div`
+  font-weight: bold;
+`;
+
+const Name = styled.div`
+  color: #555;
+  font-size: 13px;
+`;
+
+const Price = styled.div`
+  font-weight: bold;
 `;
