@@ -1,14 +1,12 @@
 // src/components/ProductCard.jsx
 import styled from "styled-components";
 
-export default function ProductCard({ brand, name, price, trades, image }) {
+export default function ProductCard({ name, price, image }) {
   return (
     <Card>
       <ImageWrapper>
-        <TopText>거래 {trades.toLocaleString()}회</TopText>
         <ProductImage src={image} alt={name} />
       </ImageWrapper>
-      <Brand>{brand}</Brand>
       <Name>{name}</Name>
       <Price>{price.toLocaleString()}원</Price>
     </Card>

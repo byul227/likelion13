@@ -1,13 +1,20 @@
 // src/pages/Shop.jsx
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import styled from "styled-components";
 import ProductCard from "../components/ProductCard";
-import productsData from "../data/Products";
 
 export default function Shop() {
   const [sortType, setSortType] = useState("low");
+  const [products, setProducts] = useState([]);
 
-  const sortedProducts = [...productsData].sort((a, b) => {
+  useEffect(() => {
+    fetch("http://localhost:3000/clothes")
+      .then((res) => res.json())
+      .then((data) => setProducts(data))
+      .catch((err) => console.error("API 호출 오류:", err));
+  }, []);
+
+  const sortedProducts = [...products].sort((a, b) => {
     return sortType === "low" ? a.price - b.price : b.price - a.price;
   });
 
@@ -63,6 +70,7 @@ export default function Shop() {
     </>
   );
 }
+
 
 const Container = styled.div`
   max-width: 1280px;
