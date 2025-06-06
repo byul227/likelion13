@@ -2,16 +2,16 @@
 import { useState, useEffect } from "react";
 import styled from "styled-components";
 import ProductCard from "../components/ProductCard";
+import axios from "axios";
 
 export default function Shop() {
   const [sortType, setSortType] = useState("low");
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:3000/clothes")
-      .then((res) => res.json())
-      .then((data) => setProducts(data))
-      .catch((err) => console.error("API 호출 오류:", err));
+    axios.get("http://localhost:3000/clothes")
+     .then((res) => setProducts(res.data)) 
+     .catch((err) => console.error("API 호출 오류:", err));
   }, []);
 
   const sortedProducts = [...products].sort((a, b) => {

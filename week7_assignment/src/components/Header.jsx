@@ -38,8 +38,10 @@ const Wrapper = styled.header`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 16px 48px;
-  border-bottom: 1px solid #e5e5e5;
+  padding: 24px 40px;
+  max-width: 1280px;
+  margin: 0 auto;
+  flex-wrap: wrap;
 `;
 
 const Left = styled.div``;
